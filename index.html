@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing Interview Kit</title>
+<style>
+  :root { --bg:#0a0a0f; --panel:#14141d; --panel2:#1c1c29; --text:#f4f4f7; --muted:#aaaabd; --accent:#00ff9d; --purple:#8b80ff; --border:#303041; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Inter,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  header { padding:36px 20px 28px; background:linear-gradient(135deg,#111121,#10251f); border-bottom:1px solid var(--border); }
+  .wrap { width:min(1000px, calc(100% - 32px)); margin:auto; }
+  .eyebrow { color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:.12em; font-size:.78rem; }
+  h1 { margin:8px 0; line-height:1.15; font-size:clamp(2rem,5vw,3rem); }
+  header p { color:var(--muted); margin:10px 0 0; max-width:700px; }
+  .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+  button { border:1px solid var(--border); background:var(--panel2); color:var(--text); border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; }
+  button.primary { background:var(--accent); color:#07110c; border-color:var(--accent); }
+  main { padding:26px 0 50px; }
+  .intro { color:var(--muted); margin:0 0 20px; }
+  section { margin:24px 0; }
+  h2 { font-size:1.35rem; margin:0 0 12px; }
+  .question { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:17px 18px; margin:10px 0; }
+  .question h3 { margin:0 0 9px; font-size:1.02rem; }
+  .answer-label { color:var(--accent); font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; font-weight:800; margin:0 0 4px; }
+  .answer { margin:0; color:#dedee8; }
+  .tip { margin-top:9px; color:var(--muted); font-size:.9rem; }
+  .scorecard { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px; }
+  .score-row { display:grid; grid-template-columns:minmax(0,1fr) 150px 45px; gap:12px; align-items:center; padding:11px 0; border-bottom:1px solid var(--border); }
+  .score-row:last-of-type { border-bottom:0; }
+  input[type=range] { width:100%; accent-color:var(--accent); }
+  .score { color:var(--accent); font-variant-numeric:tabular-nums; text-align:right; }
+  .total { display:flex; justify-content:space-between; gap:12px; align-items:center; border-top:1px solid var(--border); margin-top:14px; padding-top:16px; }
+  .total strong { font-size:1.7rem; color:var(--accent); }
+  .task-list { padding-left:22px; }
+  .task-list li { margin:7px 0; }
+  .note { color:var(--muted); font-size:.9rem; }
+  footer { border-top:1px solid var(--border); color:var(--muted); padding:20px 0 30px; font-size:.85rem; }
+  @media(max-width:600px) { .score-row { grid-template-columns:1fr 100px 36px; gap:8px; font-size:.9rem; } .question { padding:14px; } }
+  @media print {
+    :root { --bg:#fff; --panel:#fff; --panel2:#fff; --text:#111; --muted:#555; --accent:#087c50; --border:#ccc; }
+    body { background:#fff; color:#111; } header { background:#fff; border-bottom:2px solid #333; padding:20px 0; }
+    .toolbar, input[type=range], .no-print { display:none !important; }
+    .wrap { width:100%; } .question,.scorecard { break-inside:avoid; box-shadow:none; }
+    .answer { color:#222; } main { padding-top:12px; } section { margin:18px 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Hiring Toolkit</div>
+    <h1>Digital Marketing Interview</h1>
+    <p>Interview questions, sample answers, a candidate scorecard, and a practical test for a Digital Marketing role.</p>
+    <div class="toolbar">
+      <button class="primary" onclick="window.print()">Print / Save as PDF</button>
+      <button onclick="document.querySelectorAll('details').forEach(d=>d.open=!d.open)">Show / hide answers</button>
+      <button onclick="resetScores()">Reset scorecard</button>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="intro">Use the sample answers as a guide, not as a script the candidate must repeat word for word. Ask for real examples and evidence of practical work.</p>
+
+  <section>
+    <h2>1. Digital Marketing Basics</h2>
+    <article class="question"><h3>Q1. What is digital marketing?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Digital marketing is the promotion of products or services through online channels such as social media, search engines, websites, email and paid advertisements.</p></details></article>
+    <article class="question"><h3>Q2. What is the difference between SEO and SEM?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">SEO improves a website's visibility in organic search results. SEM is search engine marketing and commonly includes paid search advertising.</p></details></article>
+    <article class="question"><h3>Q3. Which digital marketing platforms and tools have you used?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Examples include Facebook, Instagram, Google Ads, Google Analytics, Canva, CapCut and Meta Business Suite. The candidate should explain which tools they have personally used and give a real example.</p></details></article>
+    <article class="question"><h3>Q4. Explain reach, impressions and engagement.</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Reach is the number of unique people who saw content. Impressions are the total number of times content was displayed. Engagement includes actions such as likes, comments, shares and saves.</p></details></article>
+  </section>
+
+  <section>
+    <h2>2. Social Media Marketing</h2>
+    <article class="question"><h3>Q5. How would you promote a business on Facebook and Instagram?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Identify the target audience, create a content calendar, publish useful posts and Reels, respond to comments and messages, and review performance analytics.</p></details></article>
+    <article class="question"><h3>Q6. How many posts should a business publish per week?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">It depends on the business and audience. I would start with a consistent schedule, such as 3–5 quality posts per week, then adjust based on results and available resources.</p></details></article>
+    <article class="question"><h3>Q7. What would you do if a page received very few likes and comments?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Review the audience, content quality, posting times and engagement data. Test different formats such as Reels, carousels and educational posts, then compare performance.</p></details></article>
+    <article class="question"><h3>Q8. Which tools can you use to create posts and videos?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Canva for graphics, CapCut for video editing, and Meta Business Suite for scheduling and managing social media content.</p></details></article>
+  </section>
+
+  <section>
+    <h2>3. Paid Advertising & Analytics</h2>
+    <article class="question"><h3>Q9. What is the difference between organic and paid marketing?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Organic marketing attracts an audience through unpaid content and search visibility. Paid marketing uses an advertising budget to reach selected audiences.</p></details></article>
+    <article class="question"><h3>Q10. What is CTR?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">CTR means Click-Through Rate. It is the percentage of impressions that result in clicks. Formula: CTR = (Clicks ÷ Impressions) × 100.</p></details></article>
+    <article class="question"><h3>Q11. What is ROAS?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Return on Ad Spend measures revenue generated for each unit spent on advertising. For example, Rs. 40,000 in revenue from Rs. 10,000 ad spend is a 4x ROAS.</p></details></article>
+    <article class="question"><h3>Q12. How would you use a Rs. 20,000 Facebook Ads budget?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Define the campaign objective, audience and expected result. Test creatives and audiences with part of the budget, monitor results, then move more budget toward better-performing ads while keeping the campaign goal in view.</p></details></article>
+  </section>
+
+  <section>
+    <h2>4. Practical Marketing Scenarios</h2>
+    <article class="question"><h3>Q13. How would you generate leads for a website development company?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Identify businesses that need websites, publish useful content and case studies, run targeted campaigns, offer a demo or consultation, and follow up with leads through appropriate channels.</p></details></article>
+    <article class="question"><h3>Q14. How would you market a Learning Management System (LMS) to schools?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Target school owners, principals and administrators. Create demo videos, highlight features such as student management, fees, results and online lessons, offer live demonstrations, and run campaigns to generate inquiries.</p></details></article>
+    <article class="question"><h3>Q15. How do you measure whether a campaign is successful?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">Measure performance against the campaign objective: leads, conversions, cost per lead, website traffic, engagement or return on ad spend. Report the results and suggest next steps.</p></details></article>
+    <article class="question"><h3>Q16. Which AI tools can help with digital marketing?</h3><details open><summary class="answer-label">Sample answer</summary><p class="answer">ChatGPT can help with ideas and copywriting, Canva AI with design, and video or analytics tools with production and reporting. Review AI output for accuracy, brand fit and originality before publishing.</p></details></article>
+  </section>
+
+  <section>
+    <h2>5. Candidate Scorecard</h2>
+    <p class="note">Move each slider to rate the candidate. Maximum total: 100 points.</p>
+    <div class="scorecard" id="scorecard">
+      <div class="score-row"><label for="s1">Digital marketing fundamentals (10)</label><input id="s1" type="range" min="0" max="10" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="score-row"><label for="s2">Social media management (15)</label><input id="s2" type="range" min="0" max="15" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="score-row"><label for="s3">SEO and keyword research (10)</label><input id="s3" type="range" min="0" max="10" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="score-row"><label for="s4">Paid ads and targeting (15)</label><input id="s4" type="range" min="0" max="15" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="score-row"><label for="s5">Content writing and creativity (15)</label><input id="s5" type="range" min="0" max="15" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="score-row"><label for="s6">Analytics and reporting (10)</label><input id="s6" type="range" min="0" max="10" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="score-row"><label for="s7">Practical problem-solving (15)</label><input id="s7" type="range" min="0" max="15" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="score-row"><label for="s8">Communication skills (10)</label><input id="s8" type="range" min="0" max="10" value="0" oninput="updateTotal()"><span class="score">0</span></div>
+      <div class="total"><div><div class="note">Candidate total</div><strong id="total">0 / 100</strong></div><div id="verdict">Not rated yet</div></div>
+    </div>
+    <p class="note">Suggested guide: 75–100 = strong candidate; 60–74 = consider further testing; below 60 = needs further evaluation. Use this as a guide, not the sole hiring decision.</p>
+  </section>
+
+  <section>
+    <h2>6. Practical Test (15–20 minutes)</h2>
+    <div class="question">
+      <ol class="task-list">
+        <li>Write the content for one Instagram post for a business.</li>
+        <li>Create a headline and description for one Facebook or Instagram ad.</li>
+        <li>Identify the target audience for a website development service.</li>
+        <li>Prepare a simple plan for a Rs. 10,000 advertising budget.</li>
+        <li>Explain how you would evaluate campaign performance after seven days.</li>
+      </ol>
+      <p class="tip"><strong>Hiring tip:</strong> Do not select a candidate based only on memorized answers. Ask for real work samples, practical results and an explanation of their own contribution.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">Digital Marketing Interview Kit · You can print this page or save it as a PDF using your browser.</div></footer>
+<script>
+function updateTotal() {
+  const rows = document.querySelectorAll('.score-row');
+  let total = 0;
+  rows.forEach(row => {
+    const input = row.querySelector('input');
+    const value = Number(input.value);
+    row.querySelector('.score').textContent = value;
+    total += value;
+  });
+  document.getElementById('total').textContent = total + ' / 100';
+  const verdict = document.getElementById('verdict');
+  verdict.textContent = total >= 75 ? 'Strong candidate' : total >= 60 ? 'Consider further testing' : total > 0 ? 'Needs further evaluation' : 'Not rated yet';
+}
+function resetScores() {
+  document.querySelectorAll('.score-row input').forEach(input => input.value = 0);
+  updateTotal();
+}
+document.querySelectorAll('details').forEach(detail => detail.open = true);
+</script>
+</body>
+</html>
